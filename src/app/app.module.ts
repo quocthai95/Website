@@ -11,6 +11,8 @@ import { ShopComponent } from './shop/shop.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
 import { ContactComponent } from './contact/contact.component';
 import { CartComponent } from './cart/cart.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { CartComponent } from './cart/cart.component';
     ShopComponent,
     DetailProductComponent,
     ContactComponent,
-    CartComponent
+    CartComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +34,6 @@ import { CartComponent } from './cart/cart.component';
     AppRouteModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, HeaderComponent, FooterComponent]
 })
 export class AppModule { }

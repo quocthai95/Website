@@ -6,12 +6,8 @@ import { AppComponent } from '../app.component';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements OnInit {
-
-  constructor() {
-   }
-
+export class AboutComponent extends AppComponent {
   ngOnInit() {
+    super.setupStuff();
   }
-
 }
