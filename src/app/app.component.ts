@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgwWowService } from 'ngx-wow';
+import { Router, NavigationEnd } from '@angular/router';
+import { LocationStrategy } from '@angular/common';
 
 declare let jQuery: any;
 
@@ -9,30 +11,38 @@ declare let jQuery: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  constructor(private wowService: NgwWowService){
+  isPopState = false;
+
+  constructor(private router: Router, private locStra: LocationStrategy, private wowService: NgwWowService) {
     this.wowService.init();
   }
   ngOnInit() {
+    this.locStra.onPopState(() => {
+      this.isPopState = true;
+    });
 
+    this.router.events.subscribe(event => {
+      // Scroll to top if accessing a page, not via browser history stack
+      if (event instanceof NavigationEnd && !this.isPopState) {
+        window.scrollTo(0, 0);
+        this.isPopState = false;
+      }
+      if (event instanceof NavigationEnd) {
+        this.isPopState = false;
+      }
+    });
   }
 
-public loadScript(scriptName) {
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = `assets/js/${scriptName}`;
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-  }
 
-public setupStuff(){
+// Setup animate slide and scroll button
+public setupStuff() {
   (function ($) {
-    "use strict";
+    'use strict';
 
     /*----- Mobile Menu -----*/
     $('.mobile-menu nav').meanmenu({
-      meanScreenWidth: "990",
-      meanMenuContainer: ".mobile-menu",
+      meanScreenWidth: '990',
+      meanMenuContainer: '.mobile-menu',
     });
 
     /*----- main slider -----*/
@@ -48,7 +58,7 @@ public setupStuff(){
     });
 
     /*----- Propular Product Slider -----*/
-    $(".propular-slider").owlCarousel({
+    $('.propular-slider').owlCarousel({
       autoplay: false,
       loop: true,
       nav: true,
@@ -225,7 +235,7 @@ public setupStuff(){
       " - $" + $("#slider-range").slider("values", 1));
 
 
-  })(jQuery);	
+  })(jQuery);
 }
 
 }
