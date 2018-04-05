@@ -20,7 +20,7 @@
         <div class="col-md-2 col-xs-12">
           <!-- Header Top Social -->
           <div class="header-social">
-            <a href="#">
+            <a href="https://www.facebook.com" target="_blank">
               <i class="fa fa-facebook"></i>
             </a>
             <a href="#">
@@ -96,7 +96,7 @@
                   </div>
                   <!-- Header Cart -->
                   <div class="header-cart">
-                    <a href="#">
+                    <a routerLink="/cart">
                       <i class="fa fa-shopping-basket"></i>
                       <span>My cart 2 items</span>
                     </a>
@@ -157,14 +157,14 @@
               <div class="main-menu hidden-sm hidden-xs">
                 <nav>
                   <ul>
-                    <li class="active">
-                      <a routerLink="/home">HOME</a>
+                    <li routerLink="/home" routerLinkActive="active" style="cursor: pointer">
+                      <a>HOME</a>
                     </li>
-                    <li>
-                      <a routerLink="/about">ABOUT US</a>
+                    <li routerLink="/about" routerLinkActive="active" style="cursor: pointer">
+                      <a>ABOUT US</a>
                     </li>
-                    <li>
-                      <a routerLink="/shop">SHOP</a>
+                    <li routerLink="/shop" routerLinkActive="active" style="cursor: pointer">
+                      <a>SHOP</a>
                       <div class="mega-menu">
                         <ul>
                           <li>
@@ -338,8 +338,8 @@
                       <a routerLink="/shop">NEW ARRIVAL</a>
                     </li>
                     <!-- <li><a href="blog.html">BLOG</a></li> -->
-                    <li>
-                      <a routerLink="/contact">CONTACT</a>
+                    <li routerLink="/contact" routerLinkActive="active" style="cursor: pointer">
+                      <a >CONTACT</a>
                     </li>
                   </ul>
                 </nav>

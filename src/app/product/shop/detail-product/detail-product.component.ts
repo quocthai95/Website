@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { AppComponent } from '../app.component';
+import { InItService } from '../../../shared/init.service';
 
 @Component({
   selector: 'app-detail-product',
   templateUrl: './detail-product.component.html',
   styleUrls: ['./detail-product.component.css']
 })
-export class DetailProductComponent extends AppComponent {
+export class DetailProductComponent implements OnInit {
 
-  // constructor() { }
+  constructor(private inItService: InItService) { }
 
   ngOnInit() {
-    super.setupStuff();
+    this.inItService.setupStuff();
   }
 
 }

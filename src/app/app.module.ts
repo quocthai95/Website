@@ -2,38 +2,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgwWowModule } from 'ngx-wow';
 import {AppRouteModule} from './app-route.module';
-
 import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
-import { HomeComponent } from './home/home.component';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { ShopComponent } from './shop/shop.component';
-import { DetailProductComponent } from './detail-product/detail-product.component';
-import { ContactComponent } from './contact/contact.component';
-import { CartComponent } from './cart/cart.component';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
-
+import { CoreModule } from './core/core.module';
+import { InformationModule } from './information/information.module';
+import { ProductModule } from './product/product.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AboutComponent,
-    HomeComponent,
-    PagenotfoundComponent,
-    ShopComponent,
-    DetailProductComponent,
-    ContactComponent,
-    CartComponent,
-    FooterComponent,
-    HeaderComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     NgwWowModule.forRoot(),
+    CoreModule,
+    InformationModule,
+    ProductModule,
     AppRouteModule
   ],
   providers: [],
-  bootstrap: [AppComponent, HeaderComponent, FooterComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

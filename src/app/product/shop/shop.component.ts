@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { AppComponent } from '../app.component';
+import { InItService } from '../../shared/init.service';
 
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
   styleUrls: ['./shop.component.css']
 })
-export class ShopComponent extends AppComponent {
+export class ShopComponent implements OnInit {
 
-  // constructor() { }
-
+  constructor(private inItService: InItService) { }
   ngOnInit() {
-    super.setupStuff();
+    this.inItService.setupStuff();
   }
 
 }
