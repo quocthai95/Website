@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InItService } from '../../shared/init.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { InItService } from '../../shared/init.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private inItService: InItService) {}
+  constructor(private inItService: InItService, private router: Router, private route: ActivatedRoute) {}
   ngOnInit() {
     this.inItService.setupStuff();
   }

@@ -51,7 +51,7 @@
 /*----------------------------------------*/
 body {
   color: #252525;
-  font-family: lato,Arial,Helvetica,sans-serif;
+  font-family: lato,Times,Helvetica,sans-serif;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -64,7 +64,7 @@ img {
 }
 h1, h2, h3, h4, h5, h6 {
   color: #252525;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
   line-height: 1.35;
   margin: 0 0 5px;
@@ -267,7 +267,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .header-social a {
   color: #fff;
   display: inline-block;
-  font-size: 12px;
+  font-size: 20px;
   padding: 0 10px;
 }
 .header-social a:hover {
@@ -339,7 +339,9 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .header-bottom .logo a {
   display: inline-block;
 }
-.header-bottom .logo a img{}
+.header-bottom .logo a img{
+  height: 3em;
+}
 
 .header-bottom .header-log-reg {
   margin-top: 5px;
@@ -791,10 +793,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 .text-white .cap-sub-title, .text-white .cap-dec {
-  color: #fff;
+  color: blueviolet;
 }
 .text-white .cap-title {
-  color: #ebebeb;
+  color: blueviolet;
 }
 .text-white .cap-readmore {
   background: #fff none repeat scroll 0 0;
@@ -1533,10 +1535,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 /*----------------------------------------*/
 /*  12.  Subscribe area
 /*----------------------------------------*/
-.subscribe-social {
-  background: #282828 none repeat scroll 0 0;
-  padding: 20px 0;
-}
 .footer-subscribe {
   overflow: hidden;
   padding-right: 140px;
