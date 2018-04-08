@@ -9,7 +9,7 @@
               <!-- Header Logo -->
               <div class="logo">
                 <a routerLink="/home">
-                  <img src="../assets/img/logo.png" alt="Logo" />
+                  <img src="assets/img/logo.png" alt="Logo" />
                 </a>
               </div>
             </div>
@@ -40,23 +40,23 @@
                     <li routerLink="/home" routerLinkActive="active" style="cursor: pointer">
                       <a>Trang chủ</a>
                     </li>
-                    <li routerLink="/shop" routerLinkActive="active" style="cursor: pointer">
+                    <li routerLinkActive="active" style="cursor: pointer">
                       <a>Cửa hàng</a>
                       <div class="mega-menu">
                         <ul>
                           <li>
-                            <a routerLink="/shop" class="text-center">CHÉN</a>
+                            <a [routerLink]="['/shop','cup']" class="text-center">CHÉN</a>
                           </li>
                         </ul>
                         <ul>
                           <li>
-                            <a routerLink="/shop" class="text-center">DĨA</a>
+                            <a [routerLink]="['/shop','plate']" class="text-center">DĨA</a>
                           </li>
                           <li>
                         </ul>
                         <ul>
                           <li>
-                            <a routerLink="/shop" class="text-center">BÁT</a>
+                            <a [routerLink]="['/shop','bowl']" class="text-center">TÔ</a>
                           </li>
                         </ul>
                       </div>

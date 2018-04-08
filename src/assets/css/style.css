@@ -990,7 +990,9 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .pro-image img {
   width: 100%;
 }
-.pro-image .primary{}
+.pro-image .primary{
+  height: 262.5px;
+}
 .pro-image .secoundary {
   left: 0;
   opacity: 0;
