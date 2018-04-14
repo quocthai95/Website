@@ -9,7 +9,7 @@ import { InItService } from '../shared/init.service';
 @NgModule({
   imports: [
     CommonModule,
-    AppRouteModule
+    AppRouteModule,
   ],
   declarations: [
     HeaderComponent,

@@ -652,13 +652,12 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .main-menu nav > ul > li .sub-menu > li > a:hover{}
 .main-menu nav > ul > li .mega-menu{
-  width: 600px;
+  width: 150px;
 }
 .main-menu  nav> ul > li .mega-menu ul {
   display: block;
-  float: left;
   padding: 0 20px;
-  width: 33.33%;
+  width: 100%;
 }
 .main-menu nav > ul > li .mega-menu ul li{}
 .main-menu nav > ul > li .mega-menu ul li:first-child {
